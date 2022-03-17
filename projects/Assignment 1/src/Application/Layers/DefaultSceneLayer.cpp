@@ -50,6 +50,7 @@
 #include "Gameplay/Components/SimpleCameraControl.h"
 #include "Gameplay/Components/SimpleObjectController.h"
 #include "Gameplay/Components/EnemyTrigger.h"
+#include "Gameplay/Components/SimpleAutoMovement.h"
 
 // Physics
 #include "Gameplay/Physics/RigidBody.h"
@@ -296,12 +297,13 @@ void DefaultSceneLayer::_CreateScene()
 		{
 			GameObject::Sptr light = scene->CreateGameObject("Light");
 			light->SetPostion(glm::vec3(glm::diskRand(25.0f), 1.0f));
+			lightParent->SetRotation(glm::vec3(-90.0f, 0.0f, 0.0f));
 			lightParent->AddChild(light);
 
 			Light::Sptr lightComponent = light->Add<Light>();
 			lightComponent->SetColor(glm::linearRand(glm::vec3(0.0f), glm::vec3(1.0f)));
 			lightComponent->SetRadius(glm::linearRand(0.1f, 50.0f));
-			lightComponent->SetIntensity(glm::linearRand(200.0f, 400.0f));
+			lightComponent->SetIntensity(glm::linearRand(100.0f, 200.0f));
 		}
 		// We'll create a mesh that is a simple plane that we can resize later
 		MeshResource::Sptr planeMesh = ResourceManager::CreateAsset<MeshResource>();
@@ -315,7 +317,8 @@ void DefaultSceneLayer::_CreateScene()
 		// Set up the scene's camera
 		GameObject::Sptr camera = scene->MainCamera->GetGameObject()->SelfRef();
 		{
-			camera->SetPostion({ -9, -6, 15 });
+			camera->SetPostion({ -4.557, 4.876, 5.670 });
+			camera->SetRotation({40.796, 0.0, -56.310});
 			camera->LookAt(glm::vec3(0.0f));
 
 			camera->Add<SimpleCameraControl>();
@@ -344,49 +347,49 @@ void DefaultSceneLayer::_CreateScene()
 			physics->AddCollider(BoxCollider::Create(glm::vec3(50.0f, 50.0f, 1.0f)))->SetPosition({ 0,0,-1 });
 		}
 
-		GameObject::Sptr wall1 = scene->CreateGameObject("Wall 1");
+		//GameObject::Sptr wall1 = scene->CreateGameObject("Wall 1");
+		//{
+		//	// Set position in the scene
+		//	wall1->SetPostion(glm::vec3(1.5f, 0.0f, 1.5f));
+		//	wall1->SetRotation(glm::vec3(90.0f, 0.0f, 0.0f));
+		//	// Add some behaviour that relies on the physics body
+		//	wall1->Add<JumpBehaviour>();
+
+		//	// Create and attach a renderer for the monkey
+		//	RenderComponent::Sptr renderer = wall1->Add<RenderComponent>();
+		//	renderer->SetMesh(wallMesh);
+		//	renderer->SetMaterial(boxMaterial);
+
+		//	/* Example of a trigger that interacts with static and kinematic bodies as well as dynamic bodies*/
+		//	EnemyTrigger::Sptr Check = wall1->Add<EnemyTrigger>();
+		//	TriggerVolume::Sptr volume = Check->AddComponent<TriggerVolume>();
+		//	ICollider::Sptr collider = volume->AddCollider(ConvexMeshCollider::Create());
+		//	
+		//	// Attach a plane collider that extends infinitely along the X/Y axis
+		//	//RigidBody::Sptr physics = wall1->Add<RigidBody>(/*static by default*/);
+		//	//physics->AddCollider(ConvexMeshCollider::Create());
+		//}
+
+		GameObject::Sptr monkey1 = scene->CreateGameObject("Monkey 1");
 		{
 			// Set position in the scene
-			wall1->SetPostion(glm::vec3(1.5f, 0.0f, 1.5f));
-			wall1->SetRotation(glm::vec3(90.0f, 0.0f, 0.0f));
-			// Add some behaviour that relies on the physics body
-			wall1->Add<JumpBehaviour>();
-
-			// Create and attach a renderer for the monkey
-			RenderComponent::Sptr renderer = wall1->Add<RenderComponent>();
-			renderer->SetMesh(wallMesh);
-			renderer->SetMaterial(boxMaterial);
-
-			/* Example of a trigger that interacts with static and kinematic bodies as well as dynamic bodies*/
-			EnemyTrigger::Sptr Check = wall1->Add<EnemyTrigger>();
-			TriggerVolume::Sptr volume = Check->AddComponent<TriggerVolume>();
-			ICollider::Sptr collider = volume->AddCollider(ConvexMeshCollider::Create());
-			
-			// Attach a plane collider that extends infinitely along the X/Y axis
-			//RigidBody::Sptr physics = wall1->Add<RigidBody>(/*static by default*/);
-			//physics->AddCollider(ConvexMeshCollider::Create());
-		}
-
-		GameObject::Sptr monkey2 = scene->CreateGameObject("Monkey 1");
-		{
-			// Set position in the scene
-			monkey2->SetPostion(glm::vec3(10.0f, 0.0f, 2.0f));
+			monkey1->SetPostion(glm::vec3(10.0f, 0.0f, 2.0f));
 
 			// Add some behaviour that relies on the physics body
-			monkey2->Add<JumpBehaviour>();
+			monkey1->Add<JumpBehaviour>();
 
 			// Create and attach a renderer for the monkey
-			RenderComponent::Sptr renderer = monkey2->Add<RenderComponent>();
+			RenderComponent::Sptr renderer = monkey1->Add<RenderComponent>();
 			renderer->SetMesh(monkeyMesh);
 			renderer->SetMaterial(boxMaterial);
 
 			// Example of a trigger that interacts with static and kinematic bodies as well as dynamic bodies
-			EnemyTrigger::Sptr reset = monkey2->Add<EnemyTrigger>();
-			
-			monkey2->Add<SimpleObjectController>();
+			EnemyTrigger::Sptr reset = monkey1->Add<EnemyTrigger>();
+			monkey1->Add<SimpleAutoMovement>();
+			//monkey2->Add<SimpleObjectController>();
 
 			//RigidBody - collider as well.
-			RigidBody::Sptr physics = monkey2->Add<RigidBody>(RigidBodyType::Dynamic);
+			RigidBody::Sptr physics = monkey1->Add<RigidBody>(RigidBodyType::Dynamic);
 			physics->AddCollider(ConvexMeshCollider::Create());
 
 			//Movement from SimpleObjectController under Gameplay/Components
@@ -545,11 +548,11 @@ void DefaultSceneLayer::_CreateScene()
 		}
 		*/
 
-		GameObject::Sptr particles = scene->CreateGameObject("Particles");
-		{
-			ParticleSystem::Sptr particleManager = particles->Add<ParticleSystem>();  
-			particleManager->AddEmitter(glm::vec3(0.0f), glm::vec3(0.0f, -1.0f, 10.0f), 10.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); 
-		}
+		//GameObject::Sptr particles = scene->CreateGameObject("Particles");
+		//{
+		//	ParticleSystem::Sptr particleManager = particles->Add<ParticleSystem>();  
+		//	particleManager->AddEmitter(glm::vec3(0.0f), glm::vec3(0.0f, -1.0f, 10.0f), 10.0f, glm::vec4(0.0f, 1.0f, 0.0f, 1.0f)); 
+		//}
 
 		GuiBatcher::SetDefaultTexture(ResourceManager::CreateAsset<Texture2D>("textures/ui-sprite.png"));
 		GuiBatcher::SetDefaultBorderRadius(8);
