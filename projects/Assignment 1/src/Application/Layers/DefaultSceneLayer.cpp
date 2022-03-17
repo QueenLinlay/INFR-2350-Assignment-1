@@ -293,18 +293,16 @@ void DefaultSceneLayer::_CreateScene()
 
 		// Create some lights for our scene
 		GameObject::Sptr lightParent = scene->CreateGameObject("Lights");
-
-		for (int ix = 0; ix < 50; ix++) {
+		{
 			GameObject::Sptr light = scene->CreateGameObject("Light");
 			light->SetPostion(glm::vec3(glm::diskRand(25.0f), 1.0f));
 			lightParent->AddChild(light);
 
 			Light::Sptr lightComponent = light->Add<Light>();
 			lightComponent->SetColor(glm::linearRand(glm::vec3(0.0f), glm::vec3(1.0f)));
-			lightComponent->SetRadius(glm::linearRand(0.1f, 10.0f));
-			lightComponent->SetIntensity(glm::linearRand(1.0f, 2.0f));
+			lightComponent->SetRadius(glm::linearRand(0.1f, 50.0f));
+			lightComponent->SetIntensity(glm::linearRand(200.0f, 400.0f));
 		}
-
 		// We'll create a mesh that is a simple plane that we can resize later
 		MeshResource::Sptr planeMesh = ResourceManager::CreateAsset<MeshResource>();
 		planeMesh->AddParam(MeshBuilderParam::CreatePlane(ZERO, UNIT_Z, UNIT_X, glm::vec2(1.0f)));
@@ -349,7 +347,7 @@ void DefaultSceneLayer::_CreateScene()
 		GameObject::Sptr wall1 = scene->CreateGameObject("Wall 1");
 		{
 			// Set position in the scene
-			wall1->SetPostion(glm::vec3(1.5f, 0.0f, 0.5f));
+			wall1->SetPostion(glm::vec3(1.5f, 0.0f, 1.5f));
 			wall1->SetRotation(glm::vec3(90.0f, 0.0f, 0.0f));
 			// Add some behaviour that relies on the physics body
 			wall1->Add<JumpBehaviour>();
