@@ -160,6 +160,7 @@ void DefaultSceneLayer::_CreateScene()
 		Texture2D::Sptr    boxSpec = ResourceManager::CreateAsset<Texture2D>("textures/box-specular.png");
 		Texture2D::Sptr    monkeyTex = ResourceManager::CreateAsset<Texture2D>("textures/monkey-uvMap.png");
 		Texture2D::Sptr    leafTex = ResourceManager::CreateAsset<Texture2D>("textures/leaves.png");
+		Texture2D::Sptr    breakTex = ResourceManager::CreateAsset<Texture2D>("textures/bricks_diffuse.png");
 		leafTex->SetMinFilter(MinFilter::Nearest);
 		leafTex->SetMagFilter(MagFilter::Nearest);
 
@@ -185,11 +186,12 @@ void DefaultSceneLayer::_CreateScene()
 		scene->SetSkyboxRotation(glm::rotate(MAT4_IDENTITY, glm::half_pi<float>(), glm::vec3(1.0f, 0.0f, 0.0f)));
 
 		// Loading in a color lookup table
-		Texture3D::Sptr lut = ResourceManager::CreateAsset<Texture3D>("luts/cool.cube");
-		//Texture3D::Sptr Wlut = ResourceManager::CreateAsset<Texture3D>("luts/warm.cube");
-		//Texture3D::Sptr Customlut = ResourceManager::CreateAsset<Texture3D>("luts/custom.cube");
+		Texture3D::Sptr Clut = ResourceManager::CreateAsset<Texture3D>("luts/cools.cube");
+		//Texture3D::Sptr Clut = ResourceManager::CreateAsset<Texture3D>("luts/warm.cube");
+		//Texture3D::Sptr Clut = ResourceManager::CreateAsset<Texture3D>("luts/custom.cube");
+		
 		// Configure the color correction LUT
-		scene->SetColorLUT(lut);
+		scene->SetColorLUT(Clut);
 
 		// Create our materials
 		// This will be our box material, with no environment reflections
@@ -234,10 +236,10 @@ void DefaultSceneLayer::_CreateScene()
 		Material::Sptr toonMaterial = ResourceManager::CreateAsset<Material>(toonShader);
 		{
 			toonMaterial->Name = "Toon";
-			toonMaterial->Set("u_Material.Diffuse", boxTexture);
+			toonMaterial->Set("u_Material.Diffuse", breakTex);
 			toonMaterial->Set("s_ToonTerm", toonLut);
-			toonMaterial->Set("u_Material.Shininess", 0.1f);
-			toonMaterial->Set("u_Material.Steps", 8);
+			toonMaterial->Set("u_Material.Shininess", 2.0f);
+			toonMaterial->Set("u_Material.Steps", 12);
 		}
 
 
