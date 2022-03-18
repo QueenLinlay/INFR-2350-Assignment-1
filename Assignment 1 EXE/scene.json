@@ -46,7 +46,7 @@
 			"range": 4.0
 		}
 	],
-	"main_camera": "6d2a26e6-e2bb-044c-ae54-10a27eb0abcb",
+	"main_camera": "222d1ef1-f139-a341-adea-ffcdcd2315c1",
 	"objects": [
 		{
 			"children": [],
@@ -61,14 +61,14 @@
 					"enabled": true,
 					"far_plane": 1000.0,
 					"fov_radians": 1.5707963705062866,
-					"guid": "6d2a26e6-e2bb-044c-ae54-10a27eb0abcb",
+					"guid": "222d1ef1-f139-a341-adea-ffcdcd2315c1",
 					"near_plane": 0.10000000149011612,
 					"ortho_enabled": false,
 					"ortho_size": 10.0
 				},
 				"SimpleCameraControl": {
 					"enabled": true,
-					"guid": "797460a1-a27c-9e4e-a856-f05588472dd3",
+					"guid": "f6b93fa9-1ca9-404f-9d02-94f30ef252b4",
 					"mouse_sensitivity": {
 						"x": 0.5,
 						"y": 0.30000001192092896
@@ -81,7 +81,7 @@
 					"shift_mult": 2.0
 				}
 			},
-			"guid": "67e2da6b-447a-9a40-b0e5-e63695886a5e",
+			"guid": "d1768193-a8a1-2449-9ddc-e27e938caf35",
 			"hide_in_inspector": false,
 			"name": "Main Camera",
 			"parent": "null",
@@ -114,7 +114,7 @@
 								"y": 50.0,
 								"z": 1.0
 							},
-							"guid": "fc17f251-58d6-2a41-bade-290d07494cb1",
+							"guid": "4c5c042d-1854-3c49-9612-6d475b19e708",
 							"position": {
 								"x": 0.0,
 								"y": 0.0,
@@ -135,7 +135,7 @@
 					],
 					"enabled": true,
 					"group": 1,
-					"guid": "306a8e25-731f-7742-a811-0e4409491c75",
+					"guid": "aa240151-7090-9148-9dfc-6e9c08aad49c",
 					"linear_damping": 0.0,
 					"mask": -1,
 					"mass": 1.0,
@@ -143,12 +143,12 @@
 				},
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "d73fee71-af62-6148-8eac-72dd394e9653",
-					"material": "b54f3b96-4933-7140-b0c4-bf0ae278104c",
-					"mesh": "bd596c3e-8319-b548-b5dd-b9f3c1a6c2c0"
+					"guid": "d3a30714-a622-1843-a4ff-c06a695e5016",
+					"material": "278b45fc-0228-6546-8eba-1a3249d72333",
+					"mesh": "abc30363-d15b-f84f-a8f7-987411b9cf93"
 				}
 			},
-			"guid": "9e84a705-08c3-7049-a29d-65351a7c1d0c",
+			"guid": "5954d80d-0df4-414f-a659-e859e14dde7a",
 			"hide_in_inspector": false,
 			"name": "Plane",
 			"parent": "null",
@@ -176,7 +176,7 @@
 					"angular_damping": 0.004999999888241291,
 					"colliders": [
 						{
-							"guid": "5fbec581-c87e-ae4f-95ed-4fbf8858b797",
+							"guid": "6e1a0199-ccbf-874a-aa93-708b63a34dae",
 							"position": {
 								"x": 0.0,
 								"y": 0.0,
@@ -197,7 +197,7 @@
 					],
 					"enabled": true,
 					"group": 1,
-					"guid": "0ccff5b9-8b8a-2b4c-a623-1abd0b41c70e",
+					"guid": "eef08f8a-c5cf-9349-ad51-d0319f264b4d",
 					"linear_damping": 0.0,
 					"mask": -1,
 					"mass": 1.0,
@@ -205,21 +205,21 @@
 				},
 				"JumpBehaviour": {
 					"enabled": true,
-					"guid": "350727f8-ed2f-a245-9cf9-0314bc43046e",
+					"guid": "3e6e2f04-3ef5-a243-be94-3e0c543caab7",
 					"impulse": 10.0
 				},
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "a610f04e-7eb2-5749-aeea-bab3ad0165e3",
-					"material": "b54f3b96-4933-7140-b0c4-bf0ae278104c",
-					"mesh": "417fdc87-5346-e94e-acf3-386cc73d4ff4"
+					"guid": "f54eab5c-187c-b94b-8bbe-5947a5843893",
+					"material": "278b45fc-0228-6546-8eba-1a3249d72333",
+					"mesh": "fbd2cfa8-c9fd-8444-980c-910fa0dc6ce3"
 				},
 				"SimpleObjectController": {
 					"enabled": true,
-					"guid": "c410b847-e2ce-eb47-b8d3-586dcf086e54"
+					"guid": "adff1476-91ce-e344-a27d-aa6df0e4526f"
 				}
 			},
-			"guid": "0f5085e6-c0ee-fe4e-808f-ae79212801c8",
+			"guid": "24ef34ec-1a4c-424c-8ed4-7aef7034157a",
 			"hide_in_inspector": false,
 			"name": "Monkey 1",
 			"parent": "null",
@@ -247,15 +247,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "2288d155-fa4b-3545-9ab9-e564f7159594",
-							"material": "ebdd50d4-9ac7-9d4c-a9f6-bdd6586de8a7",
-							"mesh": "fa586ae3-4c63-1242-a6aa-ad0ab0192f52"
+							"guid": "f31f10b6-3846-f94c-b697-b84b5caa0128",
+							"material": "f148361a-f1a7-7e47-9c07-4e2847f28c7c",
+							"mesh": "d64dc642-f654-fe40-a65b-989a7c907ade"
 						}
 					},
-					"guid": "4446a970-0e6e-1141-892c-44f8a2c28ccd",
+					"guid": "83e39edd-5e94-d540-9d7d-5bd164562cd0",
 					"hide_in_inspector": false,
 					"name": "Specular Object",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": 0.0,
 						"y": -4.0,
@@ -278,15 +278,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "824bff30-4025-264a-b019-1e787d5f16e5",
-							"material": "20b998c4-c351-bb4a-addb-d723dd42e135",
-							"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+							"guid": "cfc88b8c-922f-1940-9c24-3797a953823f",
+							"material": "fe24581b-09ff-7648-91e2-793cb45d6f3d",
+							"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 						}
 					},
-					"guid": "c52cf60a-0627-144d-9fcc-d55b168a074e",
+					"guid": "9593d3ef-a64d-1a48-ab3c-af290f956809",
 					"hide_in_inspector": false,
 					"name": "Foliage Sphere",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": -4.0,
 						"y": -4.0,
@@ -309,15 +309,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "71be3d46-9699-5346-b99f-55f40d7d8003",
-							"material": "20b998c4-c351-bb4a-addb-d723dd42e135",
-							"mesh": "2f2a4557-3c32-d843-8604-252655529fe8"
+							"guid": "ec0e2a5b-1bf0-f24d-b0e1-4852e31a7a31",
+							"material": "fe24581b-09ff-7648-91e2-793cb45d6f3d",
+							"mesh": "004f8054-65f9-4546-aba3-c0ead72d669d"
 						}
 					},
-					"guid": "13c61993-f17f-9d42-bd13-7f936f1a7b41",
+					"guid": "43cffc05-60e5-e840-bf38-d7534e9abb32",
 					"hide_in_inspector": false,
 					"name": "Foliage Box",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": -6.0,
 						"y": -4.0,
@@ -340,15 +340,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "129bdea7-f7f6-7f47-bcad-a4b1a6efece1",
-							"material": "8f79b97c-e57b-564f-bab6-d33110401479",
-							"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+							"guid": "9b93edab-5a7f-bc45-99d6-77483a896272",
+							"material": "407a018d-43fb-c440-b2db-2095007f6936",
+							"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 						}
 					},
-					"guid": "7fd5db96-12da-7841-a62f-03b814d5e78a",
+					"guid": "44bc42f6-b251-0f46-99e1-d0449e07777b",
 					"hide_in_inspector": false,
 					"name": "Toon Object",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": -2.0,
 						"y": -4.0,
@@ -371,15 +371,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "30b126e6-eec1-1e45-a526-efd8c02dd531",
-							"material": "8cbd500e-a4af-1a42-84d1-82c242ac0941",
-							"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+							"guid": "227ddbc0-8d1c-654f-9cba-74539a0c8531",
+							"material": "5690652a-ab88-2f41-b892-3a4a92e075dd",
+							"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 						}
 					},
-					"guid": "64a634ca-1dca-a14b-8b1b-b5e63b15eb00",
+					"guid": "19cd0aba-175d-bc4a-962c-b17145193388",
 					"hide_in_inspector": false,
 					"name": "Displacement Object",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": 2.0,
 						"y": -4.0,
@@ -402,15 +402,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "77c6b82f-ad13-ad4e-966f-6371abe84c21",
-							"material": "8c5db5b3-383b-304e-b680-c84d0ddbe229",
-							"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+							"guid": "f8ebe8aa-10c7-8145-9b5a-ac541b502ce0",
+							"material": "0257ab6f-0c23-224b-adb2-544808fe2095",
+							"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 						}
 					},
-					"guid": "a91e97f2-bb2a-4f44-a0b6-7a47c42c6fea",
+					"guid": "28c72e52-cddd-7848-b0e8-fbf3f9f83176",
 					"hide_in_inspector": false,
 					"name": "Multitextured Object",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": 4.0,
 						"y": -4.0,
@@ -433,15 +433,15 @@
 					"components": {
 						"RenderComponent": {
 							"enabled": true,
-							"guid": "b5171958-d172-f541-9cb0-31fdeb6b63d4",
-							"material": "9d9476dd-a767-5c48-8f22-8973984b10de",
-							"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+							"guid": "d72300cf-99bc-6d4f-9660-c42984cfe85e",
+							"material": "f8d81585-f8a5-7345-a9a3-e5462bb9a674",
+							"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 						}
 					},
-					"guid": "ea2eef1a-81ab-db4c-92c5-05d05ced1980",
+					"guid": "09e112e6-b83e-f740-ad8b-79933811da85",
 					"hide_in_inspector": false,
 					"name": "Normal Mapped Object",
-					"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+					"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 					"position": {
 						"x": 6.0,
 						"y": -4.0,
@@ -461,7 +461,7 @@
 				}
 			],
 			"components": null,
-			"guid": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"guid": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"hide_in_inspector": false,
 			"name": "Demo Parent",
 			"parent": "null",
@@ -487,15 +487,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "2288d155-fa4b-3545-9ab9-e564f7159594",
-					"material": "ebdd50d4-9ac7-9d4c-a9f6-bdd6586de8a7",
-					"mesh": "fa586ae3-4c63-1242-a6aa-ad0ab0192f52"
+					"guid": "f31f10b6-3846-f94c-b697-b84b5caa0128",
+					"material": "f148361a-f1a7-7e47-9c07-4e2847f28c7c",
+					"mesh": "d64dc642-f654-fe40-a65b-989a7c907ade"
 				}
 			},
-			"guid": "4446a970-0e6e-1141-892c-44f8a2c28ccd",
+			"guid": "83e39edd-5e94-d540-9d7d-5bd164562cd0",
 			"hide_in_inspector": false,
 			"name": "Specular Object",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": 0.0,
 				"y": -4.0,
@@ -518,15 +518,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "824bff30-4025-264a-b019-1e787d5f16e5",
-					"material": "20b998c4-c351-bb4a-addb-d723dd42e135",
-					"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+					"guid": "cfc88b8c-922f-1940-9c24-3797a953823f",
+					"material": "fe24581b-09ff-7648-91e2-793cb45d6f3d",
+					"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 				}
 			},
-			"guid": "c52cf60a-0627-144d-9fcc-d55b168a074e",
+			"guid": "9593d3ef-a64d-1a48-ab3c-af290f956809",
 			"hide_in_inspector": false,
 			"name": "Foliage Sphere",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": -4.0,
 				"y": -4.0,
@@ -549,15 +549,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "71be3d46-9699-5346-b99f-55f40d7d8003",
-					"material": "20b998c4-c351-bb4a-addb-d723dd42e135",
-					"mesh": "2f2a4557-3c32-d843-8604-252655529fe8"
+					"guid": "ec0e2a5b-1bf0-f24d-b0e1-4852e31a7a31",
+					"material": "fe24581b-09ff-7648-91e2-793cb45d6f3d",
+					"mesh": "004f8054-65f9-4546-aba3-c0ead72d669d"
 				}
 			},
-			"guid": "13c61993-f17f-9d42-bd13-7f936f1a7b41",
+			"guid": "43cffc05-60e5-e840-bf38-d7534e9abb32",
 			"hide_in_inspector": false,
 			"name": "Foliage Box",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": -6.0,
 				"y": -4.0,
@@ -580,15 +580,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "129bdea7-f7f6-7f47-bcad-a4b1a6efece1",
-					"material": "8f79b97c-e57b-564f-bab6-d33110401479",
-					"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+					"guid": "9b93edab-5a7f-bc45-99d6-77483a896272",
+					"material": "407a018d-43fb-c440-b2db-2095007f6936",
+					"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 				}
 			},
-			"guid": "7fd5db96-12da-7841-a62f-03b814d5e78a",
+			"guid": "44bc42f6-b251-0f46-99e1-d0449e07777b",
 			"hide_in_inspector": false,
 			"name": "Toon Object",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": -2.0,
 				"y": -4.0,
@@ -611,15 +611,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "30b126e6-eec1-1e45-a526-efd8c02dd531",
-					"material": "8cbd500e-a4af-1a42-84d1-82c242ac0941",
-					"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+					"guid": "227ddbc0-8d1c-654f-9cba-74539a0c8531",
+					"material": "5690652a-ab88-2f41-b892-3a4a92e075dd",
+					"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 				}
 			},
-			"guid": "64a634ca-1dca-a14b-8b1b-b5e63b15eb00",
+			"guid": "19cd0aba-175d-bc4a-962c-b17145193388",
 			"hide_in_inspector": false,
 			"name": "Displacement Object",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": 2.0,
 				"y": -4.0,
@@ -642,15 +642,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "77c6b82f-ad13-ad4e-966f-6371abe84c21",
-					"material": "8c5db5b3-383b-304e-b680-c84d0ddbe229",
-					"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+					"guid": "f8ebe8aa-10c7-8145-9b5a-ac541b502ce0",
+					"material": "0257ab6f-0c23-224b-adb2-544808fe2095",
+					"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 				}
 			},
-			"guid": "a91e97f2-bb2a-4f44-a0b6-7a47c42c6fea",
+			"guid": "28c72e52-cddd-7848-b0e8-fbf3f9f83176",
 			"hide_in_inspector": false,
 			"name": "Multitextured Object",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": 4.0,
 				"y": -4.0,
@@ -673,15 +673,15 @@
 			"components": {
 				"RenderComponent": {
 					"enabled": true,
-					"guid": "b5171958-d172-f541-9cb0-31fdeb6b63d4",
-					"material": "9d9476dd-a767-5c48-8f22-8973984b10de",
-					"mesh": "2ce12dae-6353-d04e-b246-c210755fb951"
+					"guid": "d72300cf-99bc-6d4f-9660-c42984cfe85e",
+					"material": "f8d81585-f8a5-7345-a9a3-e5462bb9a674",
+					"mesh": "b27b70cd-2725-b14c-a9fd-0bb94c391bfc"
 				}
 			},
-			"guid": "ea2eef1a-81ab-db4c-92c5-05d05ced1980",
+			"guid": "09e112e6-b83e-f740-ad8b-79933811da85",
 			"hide_in_inspector": false,
 			"name": "Normal Mapped Object",
-			"parent": "4f4bc428-a4e2-314c-9ffd-4c2358fbd43f",
+			"parent": "73264d40-f304-2246-a7c9-bbc3f272f813",
 			"position": {
 				"x": 6.0,
 				"y": -4.0,
@@ -705,7 +705,7 @@
 				"Gameplay::Physics::TriggerVolume": {
 					"colliders": [
 						{
-							"guid": "4e219d9b-9f93-c34a-bf0d-68ce6e538f99",
+							"guid": "11fb776e-3a6b-e946-83da-5b80212ead3e",
 							"half_extents": {
 								"x": 3.0,
 								"y": 3.0,
@@ -731,15 +731,15 @@
 					],
 					"enabled": true,
 					"group": 1,
-					"guid": "bb32c1c6-66e0-f744-889d-f6518ae748dc",
+					"guid": "9bc740ea-203b-3545-8f44-281f1ccc78c2",
 					"mask": -1
 				},
 				"TriggerVolumeEnterBehaviour": {
 					"enabled": true,
-					"guid": "96861b79-466e-6644-aed0-0088aa6bd9cd"
+					"guid": "afb03e64-d07f-8643-a9c4-bcad42134c17"
 				}
 			},
-			"guid": "10850940-351e-4849-a1ea-3a258442617b",
+			"guid": "f0384612-10aa-7840-b083-a9d7b49ebfea",
 			"hide_in_inspector": false,
 			"name": "Trigger",
 			"parent": "null",
@@ -769,7 +769,7 @@
 			"y": 0.0,
 			"z": 0.0
 		},
-		"shader": "d669992a-a879-9f4f-a7ce-7e66b4b528a7",
-		"texture": "0ada4942-a4fa-b744-b05e-20d8bc9e0d5d"
+		"shader": "da69c540-f70e-b744-aee1-f5f8faab600d",
+		"texture": "7b48ae75-2f01-db44-80e7-4878378a1765"
 	}
 }

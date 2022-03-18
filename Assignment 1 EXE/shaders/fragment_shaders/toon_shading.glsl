@@ -31,6 +31,10 @@ void main() {
 
 	// Get the albedo from the diffuse / albedo map
 	vec4 textureColor = texture(u_Material.Diffuse, inUV);
+	if (textureColor.r < 0.7)
+	{
+		discard;
+	}
 
 	// combine for the final result
 	vec3 result = lightAccumulation  * inColor * textureColor.rgb;
